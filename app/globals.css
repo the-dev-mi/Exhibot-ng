@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/* Font imports */
+
+/* Custom font face for Exima Geometric */
+@font-face {
+  font-family: 'Exima Geometric';
+  src: url('/fonts/Exima Geometric.otf') format('opentype');
+  font-display: swap;
+}
+
+.font-body {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans.ttf') format('truetype');
+  font-display: swap;
+}
+
+.font-ui {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url('/fonts/IBMPlexSans.ttf') format('truetype');
+  font-display: swap;
+}
+
+.font-heading {
+  font-family: 'Exima Geometric';
+  src: url('/fonts/Exima Geometric.otf') format('opentype');
+  font-display: swap;
+}
+
+
+.nav-text {
+  color: white;
+}
+
