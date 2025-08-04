@@ -8,39 +8,39 @@ import Navbar from './Navbar';
 const slideData = [
   {
     id: 1,
-    image: "https://thumbs2.imgbox.com/3a/b6/VSxqemJy_t.jpg",
-    title: "Ocean Adventure",
-    subtitle: "Discover the Deep Blue",
+    image: "/images/hero-01.jpg",
+    title: "Battle",
+    subtitle: "Battle",
     description: "Embark on an unforgettable journey across pristine waters and hidden coves"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=1920&h=1080&fit=crop&crop=center",
-    title: "Mountain Expedition",
-    subtitle: "Conquer New Heights",
+    image: "/images/hero-02.jpg",
+    title: "Igniting the Revolution",
+    subtitle: "Igniting the Revolution",
     description: "Scale majestic peaks and witness breathtaking vistas from above the clouds"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=1920&h=1080&fit=crop&crop=center",
-    title: "Forest Discovery",
+    image: "/images/hero-03.jpg",
+    title: "Design",
     subtitle: "Into the Wild",
     description: "Explore ancient forests and discover the secrets hidden within nature's sanctuary"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1920&h=1080&fit=crop&crop=center",
-    title: "Northern Lights",
+    image: "/images/hero-04.jpg",
+    title: "Believe",
     subtitle: "Chase the Aurora",
     description: "Witness the magical dance of colors painting the night sky in remote wilderness"
   },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&h=1080&fit=crop&crop=center",
-    title: "Lake Serenity",
-    subtitle: "Find Your Peace",
-    description: "Discover tranquil waters surrounded by pristine nature and perfect silence"
-  }
+  // {
+  //   id: 5,
+  //   image: "/images/hero-01.jpg",
+  //   title: "Lake Serenity",
+  //   subtitle: "Find Your Peace",
+  //   description: "Discover tranquil waters surrounded by pristine nature and perfect silence"
+  // }
 ];
 
 const Hero = () => {
@@ -62,7 +62,7 @@ const Hero = () => {
     tlRef.current = gsap.timeline();
     
     // Initial stagger animation for text elements
-    gsap.fromTo([subtitleRef.current, titleRef.current, descriptionRef.current], 
+    gsap.fromTo([ titleRef.current, descriptionRef.current], 
       { opacity: 0, y: 50 },
       { 
         opacity: 1, 
@@ -104,7 +104,7 @@ const Hero = () => {
       
       // Animate text elements out with stagger
       tlRef.current
-        .to([subtitleRef.current, titleRef.current, descriptionRef.current], {
+        .to([titleRef.current, descriptionRef.current], {
           opacity: 0,
           y: -30,
           duration: 0.3,
@@ -112,7 +112,7 @@ const Hero = () => {
           stagger: 0.1
         })
         // Animate text elements in with stagger
-        .to([subtitleRef.current, titleRef.current, descriptionRef.current], {
+        .to([ titleRef.current, descriptionRef.current], {
           opacity: 1,
           y: 0,
           duration: 0.6,
@@ -237,12 +237,12 @@ const Hero = () => {
           className="text-center text-white px-8 max-w-4xl"
           style={{ height: '70%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
         >
-          <h3 
+          {/* <h3 
             ref={subtitleRef}
             className="text-lg md:text-xl  font-bold font-sans-dm mb-2 opacity-90"
           >
             {slideData[currentSlide].subtitle}
-          </h3>
+          </h3> */}
           <h1 
             ref={titleRef}
             className="text-4xl md:text-6xl font-heading lg:text-7xl font-bold mb-6 leading-tight"

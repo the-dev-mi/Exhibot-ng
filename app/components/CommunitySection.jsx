@@ -133,7 +133,7 @@ const CommunitySection = () => {
             rel="noopener noreferrer"
             className="inline-block skew-x-[-12deg] bg-blue-700 hover:bg-blue-800 px-10 py-4 text-white font-bold text-lg shadow-xl tracking-wider transition-transform transform hover:scale-105 hover:rotate-1"
           >
-            <span className="skew-x-[12deg] block">JOIN THE HAVITECH CORE</span>
+            <span className="skew-x-[12deg] block">JOIN THE TRIBE</span>
           </a>
         </div>
       </div>

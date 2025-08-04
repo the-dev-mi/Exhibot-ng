@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Register plugins
 gsap.registerPlugin(ScrollTrigger);
 
-const BoldStatic = () => {
+const SecondStatic = () => {
   useGSAP(() => {
     // 1. Smooth infinite marquee animation
     const marquee = document.querySelector(".marquee-track-bold");
@@ -106,9 +106,7 @@ const BoldStatic = () => {
       <div className="bg-blue-700 h-full  py-32 md:py-[15rem] md:px-12 px-5 message-content opacity-0">
         <div className="relative w-full text-wrap message-text">
           <h1 className="text-4xl md:text-[8rem] md:text-wrap md:text-center text-center md:leading-[10rem] leading-[3rem] text-[#ffffff]" style={{ fontFamily: 'Exima Geometric' }}>
-            Exhibot is More Than just mere <br/>
-            <span className="text-[27px] md:text-[6rem]">Entertainment</span> <br/>
-            <span className="text-[#f97116]">It is a Movement</span> 
+            A Dynamic Fusion of Cutting-Edge Robotics, Epic Battles, and Inspiring Innovations Unleashed in a Futuristic Hub
           </h1>
         </div>
       </div>
@@ -134,4 +132,4 @@ const BoldStatic = () => {
   );
 };
 
-export default BoldStatic;
+export default SecondStatic;
