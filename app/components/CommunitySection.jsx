@@ -72,7 +72,7 @@ const CommunitySection = () => {
 
   return (
     <div
-      ref={sectionRef}
+      ref={sectionRef} id="community"
       className="relative w-full h-screen bg-gray-100 overflow-hidden flex items-center justify-center text-center px-6"
     >
       {/* Floating Gamepad Particles */}
@@ -102,7 +102,8 @@ const CommunitySection = () => {
 
       {/* Main Text Content */}
       <div className="relative z-4 max-w-3xl">
-        <h2
+        <div className="h-[150px]">
+          <h2
           ref={glitchTextRef}
           className="text-4xl md:text-[3rem] tracking-wide uppercase px-4 py-8 font-bold transition-all duration-1000 ease-in-out"
           style={{ fontFamily: 'Exima Geometric' }}
@@ -117,18 +118,19 @@ const CommunitySection = () => {
             </span>
           ))}
         </h2>
+        </div>
 
         <p
           ref={subtitleRef}
-          className="mt-6 text-black py-8 text-3xl md:text-xl font-medium max-w-xl mx-auto leading-relaxed tracking-wide"
+          className="mt-6 text-black py-8 text-3xl  md:text-xl font-medium max-w-xl mx-auto leading-relaxed font-ui tracking-wide"
         >
-          Enter a community of fearless builders, gamers, and visionaries. Explore ideas, ship faster, and shape what's next — together.
+          Enter a community of fearless builders, gamers, and visionaries. Explore ideas, ship faster, and shape what's next. <span className="font-bold text-[#F97216]">Together!</span>
         </p>
 
         {/* CTA Button */}
         <div className="mt-10">
           <a
-            href="https://discord.gg/YOUR_INVITE"
+            href="https://discord.gg/uCYwT6keJK"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block skew-x-[-12deg] bg-blue-700 hover:bg-blue-800 px-10 py-4 text-white font-bold text-lg shadow-xl tracking-wider transition-transform transform hover:scale-105 hover:rotate-1"

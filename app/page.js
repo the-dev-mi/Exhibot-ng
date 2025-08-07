@@ -11,6 +11,7 @@ import FaqSection from "./components/FaqSection";
 import CommunitySection from "./components/CommunitySection";
 import StoreSection from "./components/StoreSection";
 import SecondStatic from './components/secondStatic';
+import BoldStaticCopy from './components/BoldStaticCopy';
 
 export default function Home() {
     const lenis = useRef(null);
@@ -46,7 +47,8 @@ export default function Home() {
         <Hero/>
         <BoldStatic/>
         <CommunitySection />
-        <SecondStatic/>
+        {/* <SecondStatic/> */}
+        <BoldStaticCopy/>
         <StoreSection />
         <FaqSection />
         <Footer/>

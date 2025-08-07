@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 /* Font imports */
 
+
+html {
+  scroll-behavior: smooth;
+}
 /* Custom font face for Exima Geometric */
 @font-face {
   font-family: 'Exima Geometric';

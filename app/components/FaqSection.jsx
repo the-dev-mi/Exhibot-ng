@@ -51,7 +51,7 @@ const FaqSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-white text-black py-12 sm:py-20"
+      className="bg-white text-black py-12 sm:py-20" id="faq"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-8">
         <h2 className="text-center text-3xl sm:text-[3rem] md:text-[3rem] font-face text-blue-700 tracking-wide mb-8 sm:mb-12" style={{ fontFamily: 'Exima Geometric' }}>

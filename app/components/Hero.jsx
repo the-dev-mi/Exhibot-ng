@@ -34,6 +34,13 @@ const slideData = [
     subtitle: "Chase the Aurora",
     description: "Witness the magical dance of colors painting the night sky in remote wilderness"
   },
+  {
+    id: 5,
+    image: "/images/hero-07.jpg",
+    title: "Build",
+    subtitle: "Chase the Aurora",
+    description: "Witness the magical dance of colors painting the night sky in remote wilderness"
+  },
   // {
   //   id: 5,
   //   image: "/images/hero-01.jpg",
@@ -194,7 +201,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-screen overflow-hidden bg-black" id='home'>
       <Navbar />
       {/* Background Image */}
       <div 
@@ -278,7 +285,7 @@ const Hero = () => {
       </button> */}
 
       {/* Progress Pagination */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-40">
+      <div className="absolute hidden bottom-8 left-1/2 -translate-x-1/2  space-x-3 z-40">
         {slideData.map((_, index) => (
           <button
             key={index}

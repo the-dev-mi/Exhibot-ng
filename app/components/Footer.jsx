@@ -42,7 +42,7 @@ const Footer = () => (
       {/* Links */}
       <div className="flex flex-col items-center md:items-start gap-2 md:gap-6 text-base sm:text-lg md:text-xl text-white/60">
         <a className="text-blue-700 focus-visible:ring-2 rounded px-1">Send us a message</a>
-        <a href="mailto:admin@byhavi.tech" className="hover:underline focus-visible:ring-2 rounded px-1">Admin@byhavi.tech</a>
+        <a href="mailto:admin@byhavi.tech" className="hover:underline focus-visible:ring-2 rounded px-1">admin@byhavi.tech</a>
       </div>
 
       {/* Socials */}

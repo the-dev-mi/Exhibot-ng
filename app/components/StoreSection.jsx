@@ -22,6 +22,12 @@ const products = [
     image: "/images/003.jpg",
     description: "Customizable NFC Wristband",
   },
+  {
+    name: "",
+    category: "",
+    image: "/images/question-mark.png",
+    description: "",
+  },
 ];
 
 const StoreSection = () => {
@@ -31,7 +37,7 @@ const StoreSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="w-full h-full bg-white py-12 sm:py-16 px-4 sm:px-6 text-center"
+      className="w-full md:h-screen h-auto flex flex-col items-center justify-center bg-white  py-[8rem] sm:py-16 px-4 sm:px-6 text-center" id="store"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-[#F97216] mb-6 sm:mb-8" style={{ fontFamily: 'Exima Geometric' }}>Gear Up for the Adventure </h2>
       <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-xl mx-auto">
@@ -43,7 +49,7 @@ const StoreSection = () => {
           <motion.div
             key={idx}
             whileHover={{ scale: 1.05, rotate: 2 }}
-            className="bg-gray-50 rounded-xl shadow-md p-4 sm:p-6 w-full sm:w-[260px] flex flex-col items-center border border-gray-200"
+            className="bg-gray-50 hover:cursor-pointer rounded-xl shadow-md p-4 sm:p-6 w-full sm:w-[260px] flex flex-col items-center border border-gray-200"
           >
             <img
               src={item.image}

@@ -9,27 +9,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Register plugins
 gsap.registerPlugin(ScrollTrigger);
 
-const SecondStatic = () => {
+const BoldStaticCopy = () => {
   useGSAP(() => {
     // 1. Smooth infinite marquee animation
-    const marquee = document.querySelector(".marquee-track-bold");
-    if (marquee) {
-      const contentWidth = marquee.firstElementChild?.offsetWidth || 0;
+    const marqueeItem = document.querySelector(".marquee-track-bolder");
+    if (marqueeItem) {
+      const contentWidthItem = marqueeItem.firstElementChild?.offsetWidth || 0;
       const duration = 25; // Increased duration for slower marquee
       
-      gsap.to(marquee.children, {
-        x: `-=${contentWidth}`,
+      gsap.to(marqueeItem.children, {
+        x: `-=${contentWidthItem}`,
         duration: duration,
         ease: "none",
         repeat: -1,
         modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+          x: gsap.utils.unitize(x => parseFloat(x) % contentWidthItem)
         }
       });
     }
 
     // 2. Enhanced text animation with slower entrance
-    const titleSplit = new SplitText(".message-text h1", {
+    const titleSplitWord = new SplitText(".message-texts h1", {
       type: "lines,words,chars",
       linesClass: "line",
       wordsClass: "word",
@@ -46,7 +46,7 @@ const SecondStatic = () => {
     // Create timeline with scroll trigger
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".message-content",
+        trigger: ".message-contents",
         start: "top 90%", // Start later in scroll
         end: "top 20%", // Cover more scroll distance
         scrub: 2, // Slower scrub
@@ -55,7 +55,7 @@ const SecondStatic = () => {
     });
 
     // Slower section fade in
-    tl.to(".message-content", {
+    tl.to(".message-contents", {
       opacity: 1,
       y: 0,
       duration: 2, // Increased duration
@@ -84,11 +84,11 @@ const SecondStatic = () => {
   });
 
   return (
-    <div className="relative bg-[#0f0f0f] text-white font-ui overflow-hidden h-auto ">
+    <div className="relative bg-[#0f0f0f] text-white font-ui overflow-hidden h-auto" id="about">
       {/* Marquee Section */}
       <div className="flex flex-col gap-10">
         <div className="relative overflow-hidden whitespace-nowrap bg-[#F97216] border-t border-white/20 border-dashed py-6">
-          <div className="marquee-track-bold md:text-[2.5rem] text-[1rem] font-extrabold uppercase tracking-wider flex">
+          <div className="marquee-track-bolder md:text-[2.5rem] text-[1rem] font-extrabold uppercase tracking-wider flex">
             <span className="inline-block md:px-10 px-5 whitespace-nowrap">
                Dec 6/25 • The Future Is Not Imported • It's Built Here • Exhibot 2.0 • Uniting Benin brightest minds •
             </span>
@@ -103,9 +103,9 @@ const SecondStatic = () => {
       </div>
 
       {/* Text Content */}
-      <div className="bg-blue-700 h-full  py-32 md:py-[15rem] md:px-12 px-5 message-content opacity-0">
-        <div className="relative w-full text-wrap message-text">
-          <h1 className="text-4xl md:text-[8rem] md:text-wrap md:text-center text-center md:leading-[10rem] leading-[3rem] text-[#ffffff]" style={{ fontFamily: 'Exima Geometric' }}>
+      <div className="bg-blue-700 md:h-[200vh] py-32 md:py-[15rem] md:px-12 px-5 message-contents opacity-0">
+        <div className="relative w-full text-wrap message-texts">
+          <h1 className="text-4xl md:text-[5rem] md:text-wrap md:text-center text-center md:leading-[7rem] leading-[3rem] text-[#ffffff] mb-2" style={{ fontFamily: 'Exima Geometric' }}>
             A Dynamic Fusion of Cutting-Edge Robotics, Epic Battles, and Inspiring Innovations Unleashed in a Futuristic Hub
           </h1>
         </div>
@@ -132,4 +132,4 @@ const SecondStatic = () => {
   );
 };
 
-export default SecondStatic;
+export default BoldStaticCopy;
